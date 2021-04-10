@@ -2,7 +2,83 @@
   border: 1px solid #86867e;
   border-radius: 4px;
 }
+.Weather h1 {
+  font-size: 22px;
+  line-height: 26px;
+  display: block;
+  text-align: right;
+  font-weight: normal;
+  color: #202124;
+  margin-right: 10px;
+}
+.precipitation {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #70757a;
+  font-weight: normal;
+}
 
+.humidity {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #70757a;
+  font-weight: normal;
+}
+
+.wind {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #70757a;
+  font-weight: normal;
+}
+
+.description {
+  color: #70757a;
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  text-align: right;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.temperature {
+  display: inline;
+  color: #202124;
+  line-height: 60px;
+  font-size: 48px;
+  font-weight: normal;
+}
+.unit {
+  display: inline;
+  line-height: 24px;
+  font-size: 16px;
+  color: #202124;
+  vertical-align: top;
+  font-weight: normal;
+}
+
+.img {
+  height: 60px;
+  display: inline-block;
+  vertical-align: top;
+  width: 60px;
+  font-size: medium;
+  font-weight: normal;
+}
 .Weather form {
   padding: 16px;
+}
+
+.Weather img {
+  height: 60px;
+  width: 60px;
+}
+.Weather ul {
+  color: #70757a;
+  font-size: 12px;
+  line-height: 16px;
+  list-style: none;
 }

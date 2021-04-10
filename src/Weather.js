@@ -24,18 +24,19 @@ export default function Weather() {
             src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
             alt="cloudy"
           />
-          14ºC
+          <span className="temperature">14</span>{" "}
+          <span className="unit">ºC</span>
           <ul>
-            <li>Precipitation: 85%</li>
-            <li>Humidity: 77%</li>
-            <li>Wind: 16km/h</li>
+            <li className="precipitation">Precipitation: 85%</li>
+            <li className="humidity">Humidity: 77%</li>
+            <li className="wind">Wind: 16km/h</li>
           </ul>
         </div>
         <div className="col-6">
           <h1>Paris, France</h1>
           <ul>
-            <li>Saturday 18:00</li>
-            <li>Cloudy</li>
+            <li className="description">Saturday 18:00</li>
+            <li className="description">Cloudy</li>
           </ul>
         </div>
       </div>
