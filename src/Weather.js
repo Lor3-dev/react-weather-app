@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
@@ -13,7 +14,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       description: response.data.weather[0].description,
       city: response.data.name,
-      date: "Saturday 18:00",
+      date: new Date(response.data.dt * 1000),
       iconUrl: "https://ssl.gstatic.com/onebox/weather/64/cloudy.png",
       ready: true,
     });
@@ -54,7 +55,9 @@ export default function Weather(props) {
           <div className="col-6">
             <h1>{weatherData.city}</h1>
             <ul>
-              <li className="description">{weatherData.date}</li>
+              <li className="description">
+                <FormattedDate date={weatherData.date} />
+              </li>
               <li className="description text-capitalize">
                 {weatherData.description}
               </li>
