@@ -15,6 +15,7 @@
 .Weather canvas {
   margin-left: 40px;
 }
+
 .precipitation {
   display: block;
   font-size: 12px;
@@ -54,6 +55,9 @@
   line-height: 60px;
   font-size: 48px;
   font-weight: normal;
+}
+.WeatherTemperature {
+  color: red;
 }
 .unit {
   display: inline;
