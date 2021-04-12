@@ -11,6 +11,10 @@
   color: #202124;
   margin-right: 10px;
 }
+
+.Weather canvas {
+  margin-left: 40px;
+}
 .precipitation {
   display: block;
   font-size: 12px;
