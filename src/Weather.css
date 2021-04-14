@@ -12,8 +12,8 @@
   margin-right: 10px;
 }
 
-.Weather canvas {
-  margin-left: 0px;
+.WeatherInfo canvas {
+  margin-left: 30px;
 }
 
 .precipitation {
