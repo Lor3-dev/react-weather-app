@@ -8,23 +8,24 @@ export default function WeatherForecast(props) {
   let [forecastData, setForecastData] = useState(null);
   function handleResponse(response) {
     console.log(response.data);
-    setForecastData({
-      temperatureMax: response.data.daily[0].temp.max,
-      temperatureMin: response.data.daily[0].temp.min,
-      icon: response.data.daily[0].weather[0].icon,
-      date: response.data.daily[0].dt,
-    });
+
+    setForecastData(response.data.daily);
     setLoaded(true);
   }
   if (loaded) {
     return (
       <div className="WeatherForecast">
-        <WeatherForecastDay
-          temperatureMax={forecastData.temperatureMax}
-          temperatureMin={forecastData.temperatureMin}
-          icon={forecastData.icon}
-          date={forecastData.date}
-        />
+        <div className="row">
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col">
+                  <WeatherForecastDay data={dailyForecast} />
+                </div>
+              );
+            }
+          })}
+        </div>
       </div>
     );
   } else {
