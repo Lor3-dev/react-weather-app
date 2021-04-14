@@ -31,6 +31,7 @@ export default function Weather(props) {
     event.preventDefault();
     search();
   }
+
   function handleCity(event) {
     setCity(event.target.value);
   }
