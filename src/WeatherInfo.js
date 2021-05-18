@@ -9,10 +9,6 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <WeatherIcon
             code={props.data.icon}
-            icon="CLEAR_DAY"
-            color="goldenrod"
-            size={40}
-            animate={true}
           />
           <WeatherTemperature temperature={props.data.temperature} />
 
