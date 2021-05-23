@@ -20,13 +20,10 @@ export default function WeatherIcon(props) {
     "50d":"mist",
     "50n":"mist",
   }
-  function icon() {
-    let icon =codeMapping[props.code];
-    return `${icon}`
-  }
+
   
   return (<div>
-    <img src={`/assets/${codeMapping[props.code]}.svg` } width="${props.size}"  />
+    <img src={`/assets/${codeMapping[props.code]}.svg`} width={props.size} alt="weather" />
    </div>
   );
 }
