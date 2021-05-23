@@ -4,12 +4,13 @@
   background:linear-gradient(rgb(125, 238, 250) 0%, rgb(130, 149, 222) 100%);
 }
 .Weather h1 {
-  font-size: 22px;
+  font-size: 30px;
   line-height: 26px;
   font-weight: normal;
-  color: #202124;
+  color: #344fa0;
   display: block;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* .WeatherInfo canvas {
@@ -28,7 +29,7 @@
   display: block;
   font-size: 12px;
   line-height: 16px;
-  color: #70757a;
+  color:  #0e256b;
   font-weight: normal;
 }
 
@@ -36,12 +37,12 @@
   display: block;
   font-size: 12px;
   line-height: 16px;
-  color: #70757a;
+  color:  #0e256b;
   font-weight: normal;
 }
 
 .description {
-  color: #70757a;
+  color: #0e256b;
   font-size: 16px;
   line-height: 20px;
   display: block;
@@ -57,6 +58,8 @@
   font-size: 60px;
   font-weight: normal;
   padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+  color: #344fa0;
 }
 .WeatherTemperature {
   color: red;
@@ -87,7 +90,7 @@
   width: 80px;
 }
 .Weather ul {
-  color: #70757a;
+  color:  #0e256b;
   font-size: 12px;
   line-height: 16px;
   list-style: none;
@@ -117,3 +120,34 @@
   text-align: center;
 }
 
+.search-icon {
+  position: relative;
+  bottom: 37px;
+  left: -7%;
+  padding-top: 5px;
+  margin: 0;
+  display: block;
+  background: transparent;
+  
+  color: #155d86;
+  
+}
+
+.WeatherForecastDay .WeatherForecast-temp-max {
+  font-family: 'Noto Sans', sans-serif;
+  color: #0e256b;
+}
+.WeatherForecastDay .WeatherForecast-temp-min {
+  font-family: 'Noto Sans', sans-serif;
+  color: #0e256b;
+
+}
+.WeatherForecastDay .WeatherForecast-day {
+  font-family: 'Noto Sans', sans-serif;
+  color: #0e256b;
+
+}
+
+.WeatherInfo .WeatherTemperature .unit {font-family: 'Poppins', sans-serif;
+  color: #344fa0;
+font-size: 25px;}
