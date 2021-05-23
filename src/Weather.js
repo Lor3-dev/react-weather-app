@@ -57,8 +57,8 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-11 button-in">
+          <div className="row search-form">
+            <div className="col-8 button-in">
               <input
                 type="search"
                 placeholder="Search city..."
@@ -67,11 +67,10 @@ export default function Weather(props) {
                 onChange={handleCity}
               />
             </div>
-
-            <button className="search-icon">
+            <button className="search-icon col-auto">
                 <i className="fa fa-search" aria-hidden="true"></i>
               </button>
-              <button className="location-icon" onClick={fetchLocation} >
+              <button className="location-icon col-auto" onClick={fetchLocation} >
                 <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
               </button>
             {/* <div className="col-3">
