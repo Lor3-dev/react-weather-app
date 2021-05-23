@@ -19,6 +19,7 @@ export default function Weather(props) {
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
+      feels_like: response.data.main.feels_like,
       ready: true,
     });
   }
@@ -35,23 +36,47 @@ export default function Weather(props) {
   function handleCity(event) {
     setCity(event.target.value);
   }
+
+  function getCurrentLocation(position) {
+    const apiKey = "cf76ec6bfd9d3c2ea4f7240c87482c39";
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function fetchLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  }
+
+
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-9 button-in">
               <input
                 type="search"
-                placeholder="Enter a city..."
+                placeholder="Search city..."
                 className="form-control"
                 autoFocus="on"
                 onChange={handleCity}
               />
             </div>
-            <div className="col-3">
+
+            <button className="search-icon">
+                <i className="fa fa-search" aria-hidden="true"></i>
+              </button>
+              <button className="location-icon" onClick={fetchLocation}>
+                <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
+              </button>
+            {/* <div className="col-3">
               <button className="btn btn-primary w-100">Search</button>
-            </div>
+            </div> */}
           </div>
         </form>
         <WeatherInfo data={weatherData} />

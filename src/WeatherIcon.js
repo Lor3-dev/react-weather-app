@@ -25,7 +25,8 @@ export default function WeatherIcon(props) {
     return `${icon}`
   }
   
-  return (<div><img src= "/assets/{codeMapping[props.code]}.svg" />
+  return (<div>
+    <img src={`/assets/${codeMapping[props.code]}.svg` } width="${props.size}"  />
    </div>
   );
 }
